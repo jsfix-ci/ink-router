@@ -1,6 +1,6 @@
 import { h, Component } from 'ink'
 import PropTypes from 'prop-types'
-import createHistory from 'history/createMemoryHistory'
+import { createMemoryHistory as createHistory } from 'history';
 import makeBroadcaster from 'ink-broadcast/dist/broadcast'
 
 const Broadcast = makeBroadcaster('router')
