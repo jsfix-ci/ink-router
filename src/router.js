@@ -36,7 +36,10 @@ export default class Router extends Component {
 
   constructor(props, context) {
     super(props, context)
-    this.history = createMemoryHistory({
+    this.history = /* TODO: JSFIX could not patch the breaking change:
+    Removed keyLength 
+    Suggested fix: The keyLength property has been removed, meaning you can no longer specify the length of the location.key. This might require you to rewrite other places, if the length of the key was used, the new default is 8. */
+    createMemoryHistory({
       initialEntries: props.initialEntries,
       initialIndex: props.initialIndex,
       keyLength: props.keyLength,
